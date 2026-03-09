@@ -1,110 +1,213 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8" />
 <title>แมว</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet"/>
+
+<style>
+
+body{
+font-family:'Noto Sans Thai',sans-serif;
+margin:0;
+background:#f5f5f5;
+text-align:center;
+}
+
+header{
+background:#222;
+color:white;
+padding:30px;
+}
+
+.main-title{
+font-size:28px;
+font-weight:bold;
+}
+
+.sub-title{
+font-size:16px;
+color:#666;
+}
+
+.ar-section{
+max-width:700px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.head-title{
+font-size:24px;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+model-viewer{
+width:100%;
+height:400px;
+background:#eee;
+border-radius:10px;
+}
+
+.ar-button{
+margin-top:15px;
+padding:12px 30px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#ff4d4d;
+color:white;
+cursor:pointer;
+}
+
+.ar-button:hover{
+background:#ff2222;
+}
+
+footer{
+margin-top:40px;
+padding:25px;
+background:#222;
+color:white;
+}
+
+footer a{
+color:#ff8080;
+text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="main-title">แมวเป่าที่อัดคุณได้</div>
-  <div class="sub-title">แมวที่ต่อยได้ (AR)</div>
+<div class="main-title">แมวเป่าที่อัดคุณได้</div>
+<div class="sub-title">แมวที่ต่อยได้ (AR)</div>
 </header>
 
-<!-- ===== งานที่ 1 ===== -->
+<!-- งานที่ 1 -->
 <div class="ar-section">
-  <div class="head-title">Mingpu</div>
-  <div class="sub-title">Concept design from jk girl</div>
 
-  <model-viewer id="model1"
-      src="CHARACTER.glb"
-      ios-src="CHARACTER.usdz"
-      ar
-      ar-modes="scene-viewer webxr quick-look"
-      camera-controls
-      autoplay
-      auto-rotate
-      shadow-intensity="1"
-      shadow-softness="1"
-      environment-image="neutral.hdr"
-      loading="eager"
-      reveal="auto"
-      style="width: 100%; height: 400px;">
-  </model-viewer>
+<div class="head-title">Mingpu</div>
+<div class="sub-title">Concept design from jk girl</div>
 
-  <button class="ar-button" onclick="triggerAR('model1')">
-    Play AR
-  </button>
+<model-viewer
+id="model1"
+src="CHARACTER.glb"
+ios-src="CHARACTER.usdz"
+
+ar
+ar-modes="scene-viewer webxr quick-look"
+
+camera-controls
+auto-rotate
+
+autoplay
+animation-name="*"
+animation-crossfade-duration="500"
+
+shadow-intensity="1"
+
+style="width:100%; height:400px;">
+</model-viewer>
+
+<button class="ar-button" onclick="triggerAR('model1')">
+Play AR
+</button>
+
 </div>
 
-<!-- ===== งานที่ 2 ===== -->
+
+<!-- งานที่ 2 -->
 <div class="ar-section">
-  <div class="head-title">Sinual</div>
-  <div class="sub-title">
-    Queen of egypte
-  </div>
-  <div class="sub-title">
-    ราชนีegypteยุคใหม่
-  </div>
 
-  <model-viewer id="model2"
-      src="egyptequeen.glb"
-      ios-src="egyptequeen.usdz"
-      ar
-      ar-modes="scene-viewer webxr quick-look"
-      camera-controls
-      autoplay
-      auto-rotate
-      shadow-intensity="1"
-      shadow-softness="1"
-      environment-image="neutral.hdr"
-      loading="eager"
-      reveal="auto"
-      style="width: 100%; height: 400px;">
-  </model-viewer>
+<div class="head-title">Sinual</div>
 
-  <button class="ar-button" onclick="triggerAR('model2')">
-    Play AR
-  </button>
+<div class="sub-title">
+Queen of egypte
 </div>
+
+<div class="sub-title">
+ราชินี egypte ยุคใหม่
+</div>
+
+<model-viewer
+id="model2"
+src="egyptequeen.glb"
+ios-src="egyptequeen.usdz"
+
+ar
+ar-modes="scene-viewer webxr quick-look"
+
+camera-controls
+auto-rotate
+
+autoplay
+animation-name="*"
+animation-crossfade-duration="500"
+
+shadow-intensity="1"
+
+style="width:100%; height:400px;">
+</model-viewer>
+
+<button class="ar-button" onclick="triggerAR('model2')">
+Play AR
+</button>
+
+</div>
+
+
 <footer>
- 
-  <div class="footer-link">
-    <strong>Facebook:</strong>
-    <a href="https://www.facebook.com/mushroomsstudio" target="_blank">
-      facebook.com/mushroomsstudio
-    </a>
-  </div>
 
-  <div class="footer-link">
-    <strong>Website:</strong>
-    <a href="https://www.mushroom-studio.com" target="_blank">
-      mushroom-studio.com
-    </a>
-  </div>
+<div class="footer-link">
+<strong>Facebook:</strong>
+<a href="https://www.facebook.com/mushroomsstudio" target="_blank">
+facebook.com/mushroomsstudio
+</a>
+</div>
+
+<div class="footer-link">
+<strong>Website:</strong>
+<a href="https://www.mushroom-studio.com" target="_blank">
+mushroom-studio.com
+</a>
+</div>
+
 </footer>
+
 
 <!-- โหลด model-viewer -->
 <script type="module"
-  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
 
 <script>
-function triggerAR(id) {
-  const viewer = document.getElementById(id);
 
-  if (viewer && viewer.activateAR) {
-    viewer.activateAR().catch((error) => {
-      alert("AR ไม่พร้อมบนอุปกรณ์นี้ หรือถูกบล็อกโดย browser\n(แนะนำให้กดปุ่ม AR บนมุมขวาของโมเดลแทน)");
-      console.warn("activateAR failed:", error);
-    });
-  }
+function triggerAR(id){
+
+const viewer=document.getElementById(id);
+
+if(viewer && viewer.activateAR){
+
+viewer.activateAR().catch((error)=>{
+
+alert("AR ไม่พร้อมบนอุปกรณ์นี้ หรือ browser ไม่รองรับ");
+
+console.warn("activateAR failed:",error);
+
+});
+
 }
+
+}
+
 </script>
 
 </body>
